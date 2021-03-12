@@ -10,14 +10,14 @@ compinit -D
 
 # Add paths
 export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/dotfiles/bin:$PATH"
 #export PATH="./node_modules/.bin:$PATH"
 
 # Colorize terminal
 alias ls='ls -G'
 alias ll='ls -lG'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
+alias grep='grep --color'
 
 # Nicer history
 export HISTSIZE=100000

@@ -1,8 +1,8 @@
-. ~/bin/bash_colors.sh
+. ~/dotfiles/bin/bash_colors.sh
 
 # Add paths that should have been there by default
 export PATH=${PATH}:/usr/local/bin
-export PATH="~/bin:$PATH"
+export PATH="~/dotfiles/bin:$PATH"
 export PATH="$PATH:~/.gem/ruby/1.8/bin"
 
 # Add postgres to the path
@@ -11,8 +11,8 @@ export PATH=$PATH:/Library/PostgreSQL/8.3/bin
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
-alias ls='ls -G'
-alias ll='ls -lG'
+alias ls='ls -G --color'
+alias ll='ls -lG --color'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
@@ -64,7 +64,7 @@ python_module_dir () {
         )"
 }
 
-source ~/bin/git-completion.bash
+source ~/dotfiles/bin/git-completion.bash
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
