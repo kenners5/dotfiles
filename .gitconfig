@@ -1,6 +1,8 @@
 [user]
     name = Ken Naishtat
     email = kenners@gmail.com
+[core]
+    editor = /usr/bin/vim
 [diff]
 [color]
     ui = auto
