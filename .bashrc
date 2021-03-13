@@ -48,7 +48,7 @@ grb_git_prompt() {
         echo ${GIT_PROMPT}
     fi
 }
-PS1="\h:\W\$(grb_git_prompt) \u\$ "
+PS1="\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\[\033[00m\]\W\$(grb_git_prompt) \u\$ "
 
 activate_virtualenv() {
     if [ -f env/bin/activate ]; then . env/bin/activate;
