@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+# type: ignore
 
 # ptags
 #
@@ -10,7 +11,9 @@
 # Warns about files it cannot open.
 # No warnings about duplicate tags.
 
-import sys, re, os
+import sys
+import re
+import os
 
 tags = []    # Modified global variable!
 
@@ -21,7 +24,8 @@ def main():
     if tags:
         fp = open('tags', 'w')
         tags.sort()
-        for s in tags: fp.write(s)
+        for s in tags:
+            fp.write(s)
 
 
 expr = '^[ \t]*(def|class)[ \t]+([a-zA-Z0-9_]+)[ \t]*[:\(]'
@@ -30,9 +34,10 @@ matcher = re.compile(expr)
 def treat_file(filename):
     try:
         fp = open(filename, 'r')
-    except:
+    except OSError:
         sys.stderr.write('Cannot open %s\n' % filename)
         return
+
     base = os.path.basename(filename)
     if base[-3:] == '.py':
         base = base[:-3]

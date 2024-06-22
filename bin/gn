@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# type: ignore
 
 #
 # Print a summary of a piped diff like:
@@ -15,7 +16,8 @@
 #   +11 lines (+18, -7)
 #   +77 words (+110, -33)
 
-import sys, os, re, fileinput
+import re
+import fileinput
 
 def get_lines(diff_lines):
     # Added lines start with '+' (but not '+++', because that marks a new
